@@ -1,0 +1,25 @@
+<fanta>:1.25
+<apple juice>:1
+<kool-aid>:0.80
+<mango lassi>:2
+<sprite>:1.25
+<bubble tea>:3
+<oreo milkshake>:3.50
+<pink lemonade>:1
+<blueberry lemonade>:2.50
+<dr. pepper>:1.25
+<sweet tea>:1
+<sparkling cider>:3
+<chocolate milk>:1.50
+<pepsi>:1.25
+<aloe drink>:3
+<red bull>:4
+<unsweetened iced tea>:1.25
+<protein shake>:3
+<orange juice>:1
+<coconut water>:2.50
+<coffee>:1
+<2% milk>:1.50
+<coke>:1.25
+<whole milk>:1.50
+<lemonade>:1

@@ -1,0 +1,40 @@
+<chips>:2
+<salsa>:3
+<heavenly buffaloes chicken wings>:10
+<pineapples>:2
+<artichoke dip>:4
+<eggplant pizza>:9
+<lo mein>:8.50
+<caesar salad>:5.50
+<steak>:12
+<ramen>:6.50
+<sausage pizza>:9
+<roast pork>:6
+<fettucini alfredo>:7
+<stuffed mushrooms>:4
+<beef stir-fry>:7.50
+<fruit salad>:3.50
+<curry>:6
+<chicken burrito>:7.50
+<grilled chicken salad>:7
+<salmon benedict>:10
+<masala dosa>:4.50
+<chicken crepe>:8
+<beets>:2
+<cookies and cream ice cream>:3
+<chicken tikka masala>:7.50
+<pork dumplings>:6
+<fried oreos>:3
+<cheesy bean and rice burrito>:1
+<ginger chicken>:8
+<buffalo wings>:5
+<penne arrabiatta>:8
+<popcorn>:0.75
+<chicken fingers>:3
+<french fries>:1
+<tandoori chicken>:5
+<chorizo tacos>:3
+<popcorn chicken>:2.50
+<pepperoni pizza>:9
+<chicken alfredo>:6
+<meatloaf>:6.50
