@@ -1,4 +1,4 @@
--------------
+
 Assumptions
 -------------
 
@@ -10,10 +10,9 @@ In writing my algorithm, I made five major assumptions:
 	Example: Pizza and chips yield the same utility, regardless of their costs.
 4.) The cost associated with each food or drink item is the amount for 1 guest;
 	So, in the case where 2 different guests prefer the same item, I would need to buy 2 portions of that item.
-	Example: If Bob and Janice both prefer chips, and chips cost $2.00, to fulfill both of their preferences I would need to buy $4.00 worth of chips.
-5.) The user correctly inputs values into the people.txt, food.txt, and drinks.txt files, meaning proper formatting, spelling, no duplicate names, etc.
+	Example: If Bob and Janice both prefer chips, and chips cost $2.00, to fulfill both of their preferences I would need to buy 	$4.00 worth of chips.
+5.) The user correctly inputs values into the people.txt, food.txt, and drinks.txt files, meaning proper formatting, spelling, no 	duplicate names, etc.
 
--------------
 Algorithm
 -------------
 
@@ -25,8 +24,8 @@ allows for no more items. This is the end goal, but there are numerous steps the
 The steps are as follows:
 
 1.) The algorithm creates two maps to better organize the information: preferencesMap and consumablesMap.
-PreferencesMap maps each guest to his/her preferences, while consumablesMap maps each item to its cost.
-It does this by parsing the three text files and adding the appropriate values from the files to their respective maps.
+	PreferencesMap maps each guest to his/her preferences, while consumablesMap maps each item to its cost.
+	It does this by parsing the three text files and adding the appropriate values from the files to their respective maps.
 
 2.) A copy of each map, called tmpPreferences and tmpConsumables, are made, so that these maps can be modified.
 
@@ -37,8 +36,7 @@ It does this by parsing the three text files and adding the appropriate values f
 	If the preferenced item from tmpPreferences matches the key from tmpConsumables, the price value is then extracted.
 	This price is then compared to a variable called cheapestPrice that stores the lowest price,
 	and if the price of this item is lower than what is stored in cheapestPrice, cheapestPrice updates to this new lowest price.
-	However, more than just cheapestPrice is updated; guestsPleased is a list that will add the name of the guest who desires this item,
-	and preferenceIndices is a list that will store the index of the preference list from tmpPreferences that the 
+	However, more than just cheapestPrice is updated; guestsPleased is a list that will add the name of the guest who desires this 	item, and preferenceIndices is a list that will store the index of the preference list from tmpPreferences that the 
 	cheapest item is located at. There is also a variable cheapestItem that stores the name of the item that is currently
 	associated with the lowest price, which is updated if a new lowest price is found. Once every food item in tmpPreferences
 	is iterated through, the final value of the lowest price is held within the cheapestPrice variable,
@@ -49,9 +47,7 @@ It does this by parsing the three text files and adding the appropriate values f
 4.) Now that the lowest available consumable has been identified, it is time to see what can be afforded. For each unit
 	of the cheapest item desired, if cheapestPrice + amountSpent remains lower than the budget, then the item can be bought
 	and the algorithm will update amountSpent. The algorithm will also update a map called itemsBought, which has the name
-	of the item bought as the key and the number of units bought as the value. To update tmpPreferences and tmpConsumables accordingly,
-	the algorithm goes through tmpPreferences again and uses guestsPleased and preferenceIndices to find the guest who wants the item,
-	and the index of the cheapest item that was identified within the list of this guest's preferences.
+	of the item bought as the key and the number of units bought as the value. To update tmpPreferences and tmpConsumables 	accordingly, the algorithm goes through tmpPreferences again and uses guestsPleased and preferenceIndices to find the guest who 	wants the item, and the index of the cheapest item that was identified within the list of this guest's preferences.
 	The algorithm then removes that item from the list of preferences. This process is executed for each guest that listed the item, 
 	until there are no more guests in guestsPleased that prefer the item.
 	However, if not all the units of the item could have been purchased, that means the algorithm detected that buying another
