@@ -105,32 +105,9 @@ in the preferences file and make the changes accordingly there, whether that be 
 Other testing I did involved the budget input. Although the budget was supposed to only be an integer, I expanded the functionality
 to allow for doubles as well, thus simulating the input of real dollars. To test, I tried the following cases:
 
-0.10 - works
+0.10 - works 5 - works 5.10 - works 1,234 - works 100,101 - works 100,101.58 - works
 
-5 - works
-
-5.10 - works
-
-1,234 - works
-
-100,101 - works
-
-100,101.58 - works
-
-
-.10 - does not work
-
-5.1 - does not work
-
-100,1011 - does not work
-
-100,101.580 - does not work
-
-f - does not work
-
-f.50 - does not work
-
-[blank] - does not work
+.10 - does not work 5.1 - does not work 100,1011 - does not work 100,101.580 - does not work f - does not work f.50 - does not work [blank] - does not work
 
 
 By going through these cases, I ensured the input would only allow correct formats for the budget.
