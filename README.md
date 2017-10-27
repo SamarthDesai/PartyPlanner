@@ -75,20 +75,20 @@ By running the program with different variations of the file input, I proved the
 however, the user needs to have a blank line in place, instead of moving the preferences up.
 Example: If Joe likes no food but only prefers drinks, his preferences must listed as:
 	
-	Joe
+		Joe
+		
+		pineapple juice
+		Aaron
+		cheese pizza
+		mountain dew, root beer
 	
-	pineapple juice
-	Aaron
-	cheese pizza
-	mountain dew, root beer
-	
-	It cannot be:
-	
-	Joe
-	pineapple juice
-	Aaron
-	cheese pizza
-	mountain dew, root beer
+		It cannot be:
+		
+		Joe
+		pineapple juice
+		Aaron
+		cheese pizza
+		mountain dew, root beer
 	
 One interesting nuance that I left unresolved was the case of duplicate names, because I don't agree that a user would do that.
 A person would not list, for example, the preferences of John and John. Rather, they would likely make some distinction either
