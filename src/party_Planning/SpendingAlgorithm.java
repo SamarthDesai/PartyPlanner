@@ -90,13 +90,19 @@ public class SpendingAlgorithm {
 				}
 			}
 
+			String currentGuest = null;
+			int guestExtra = 0;
 			for (int i = 0; i<guestsPleased.size(); i++) {
 				if (amountSpent + cheapestValue <= budget) {
-					tmpPreferences.get(guestsPleased.get(i)).remove(preferenceIndices.get(i).intValue());
+					if (guestsPleased.get(i).equals(currentGuest)) {
+						guestExtra++;
+					}
+					tmpPreferences.get(guestsPleased.get(i)).remove(preferenceIndices.get(i).intValue()-guestExtra);
 					if (tmpPreferences.get(guestsPleased.get(i)).isEmpty()) {
 						tmpPreferences.remove(guestsPleased.get(i));
 					}
 					amountSpent += cheapestValue;
+					currentGuest = guestsPleased.get(i);
 					itemsBoughtMap.put(cheapestItem, i+1);
 				}
 				else {

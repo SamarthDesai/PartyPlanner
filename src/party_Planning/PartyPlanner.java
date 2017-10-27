@@ -38,6 +38,7 @@ public class PartyPlanner {
 
 	private static final String BACKGROUND_COLOR_CODE = "fff5ee";
 	private static final int PLANNER_PADDING = 10;
+	private static final String BUDGET_LABEL_TEXT = "Please enter your budget:";
 	private static final int BUDGET_BOX_GAP = 10;
 	private static final int INPUT_BOX_GAP = 3;
 	private static final String DOLLAR_SIGN = "$";
@@ -49,12 +50,14 @@ public class PartyPlanner {
 	private static final String ITEM_LIST_TITLE = "Food and Drinks";
 	private static final String BUDGET_ERROR_MESSAGE = "Please enter a correct budget";
 	private static final Color BUDGET_ERROR_COLOR = Color.RED;
+	private static final String BUDGET_OUTLINE_COLOR = "limegreen;";
 	private static final String LIST_ENTRY_BRIDGE = ": ";
 	private static final String REMAINING_LIST_TITLE = "Remaining Items";
 	private static final String PREFERENCES_MATCHER = "\\[(.*?)\\]";
 	private static final int STATISTICS_GAP = 20;
-	private static final String STATISTICS_OUTLINE = "-fx-border-style: solid inside;" + 
+	private static final String BOX_OUTLINE = "-fx-border-style: solid inside;" +
 													 "-fx-border-width: 2;" +
+													 "-fx-padding: 1;" +
 													 "-fx-border-insets: 5;" + 
 													 "-fx-border-radius: 5;" +
 													 "-fx-border-color: ";
@@ -71,6 +74,7 @@ public class PartyPlanner {
 	
 	private TextField budgetInput;
 	private HBox budgetBox;
+	private HBox borderBox;
 	private double budget;
 	
 	private ObservableList<String> items;
@@ -112,7 +116,7 @@ public class PartyPlanner {
 	 * Creates panel for user budget input
 	 */
 	private void createBudgetInput() {
-		Label budgetLabel = new Label ("Please enter your budget:");
+		Label budgetLabel = new Label (BUDGET_LABEL_TEXT);
 		budgetInput = new TextField();
 		handleEnter();
 		
@@ -124,7 +128,13 @@ public class PartyPlanner {
 		budgetBox.getChildren().addAll(budgetLabel, inputBox);
 		budgetBox.setAlignment(Pos.CENTER);
 		
-		root.setTop(budgetBox);
+		budgetBox.setStyle(BOX_OUTLINE + BUDGET_OUTLINE_COLOR);
+		
+		borderBox = new HBox();
+		borderBox.setAlignment(Pos.CENTER);
+		borderBox.getChildren().add(budgetBox);
+		
+		root.setTop(borderBox);
 	}
 	
 	/**
@@ -145,7 +155,7 @@ public class PartyPlanner {
 					if (!budgetInput.getText().isEmpty() && budgetInput.getText().matches(REGEX_MATCH)) 
 					{
 						if(errorMessages.size()>0) {
-							budgetBox.getChildren().remove(errorMessages.get(0));
+							borderBox.getChildren().remove(errorMessages.get(0));
 							errorMessages.remove(0);
 						}
 						String budgetEntry = budgetInput.getText();
@@ -172,7 +182,7 @@ public class PartyPlanner {
 						}
 						Label blankBudget = new Label(BUDGET_ERROR_MESSAGE);
 						blankBudget.setTextFill(BUDGET_ERROR_COLOR);
-						budgetBox.getChildren().add(blankBudget);
+						borderBox.getChildren().add(blankBudget);
 						errorMessages.add(blankBudget);
 					}
 					
@@ -344,7 +354,7 @@ public class PartyPlanner {
 	 */
 	private HBox createStatisticsBox (String color, String moneyTrackerTitle, Label moneyTracker, SimpleIntegerProperty itemTracker, String itemTrackerTitle) {
 		HBox statisticsBox = new HBox(STATISTICS_GAP);
-		statisticsBox.setStyle(STATISTICS_OUTLINE + 
+		statisticsBox.setStyle(BOX_OUTLINE + 
 									color);
 		
 		HBox moneyBox = new HBox();

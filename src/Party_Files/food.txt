@@ -38,3 +38,7 @@
 <pepperoni pizza>:9
 <chicken alfredo>:6
 <meatloaf>:6.50
+<spaghetti & meatballs>:6
+<cheeseburger>:2
+<hot dog>:1.25
+<chicken tenders>:2.50

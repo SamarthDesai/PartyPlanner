@@ -23,3 +23,6 @@
 <coke>:1.25
 <whole milk>:1.50
 <lemonade>:1
+<skim milk>:1.50
+<fruit punch>:1.25
+<glacier freeze gatorade>:1.50
