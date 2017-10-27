@@ -60,7 +60,6 @@ However, in the case that the budget is above the collective cost of all the des
 then the algorithm returns itemsBoughtMap, which in this case contains every unit of every item preference
 listed, thus satisfying every guest completely.
 
-------------
 Test Cases
 ------------
 
