@@ -177,7 +177,7 @@ public class PartyPlanner {
 					}
 					else {
 						if(errorMessages.size()>0) {
-							budgetBox.getChildren().remove(errorMessages.get(0));
+							borderBox.getChildren().remove(errorMessages.get(0));
 							errorMessages.remove(0);
 						}
 						Label blankBudget = new Label(BUDGET_ERROR_MESSAGE);
